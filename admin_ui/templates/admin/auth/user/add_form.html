@@ -1,0 +1,13 @@
+{% extends "admin/change_form.html" %}
+{% load i18n %}
+
+{% block after_field_sets %}
+
+<p>{% trans "First, enter a username and password. Then, you'll be able to edit more user options." %}</p>
+
+{% endblock %}
+
+{% block inline_field_sets %}
+{# Also hide Mezzanine's site permissions field for for consistency. #}
+<div style="visibility:hidden;">{{ block.super }}</div>
+{% endblock %}
