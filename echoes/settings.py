@@ -26,6 +26,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = (
     'admin_ui',
+    'frontend',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -57,6 +58,11 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 ROOT_URLCONF = 'echoes.urls'
+
+TEMPLATE_LOADERS = (
+    "django.template.loaders.filesystem.Loader",
+    "django.template.loaders.app_directories.Loader",
+)
 
 TEMPLATES = [
     {
