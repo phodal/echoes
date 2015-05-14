@@ -27,13 +27,18 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = (
     'admin_ui',
     'frontend',
+    'conf',
     'django.contrib.admin',
+    'django.contrib.sites',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 )
+
+SITE_ID = 1
+BITLY_ACCESS_TOKEN = ""
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
