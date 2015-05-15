@@ -18,7 +18,6 @@ STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
-
 #########
 # PATHS #
 #########

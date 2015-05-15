@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="zh-cmn-Hans">
-{% load i18n future %}
-{% load static from staticfiles %}
+{% load i18n future staticfiles %}
 
 <head>
     <meta charset="UTF-8"/>
@@ -10,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
     <meta name="description" content="{% block meta_description %}{% endblock %}">
-    <link rel="stylesheet" type="text/css" href="{% static "css/default.css" %}"/>
-    <link rel="stylesheet" type="text/css" href="{% static "css/component.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "phodal/css/default.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "phodal/css/component.css" %}">
     <title>{% block meta_title %}{% endblock %}</title>
 </head>
 
