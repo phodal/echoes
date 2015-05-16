@@ -16,28 +16,8 @@ from django.utils.translation import ugettext_lazy as _
 from conf import register_setting
 
 register_setting(
-    name="ADMIN_MENU_ORDER",
-    description=_("Controls the ordering and grouping of the admin menu."),
-    editable=False,
-    default=(
-        (_("Content"), ("pages.Page", "blog.BlogPost",
-           "generic.ThreadedComment", (_("Media Library"), "fb_browse"),)),
-        (_("Site"), ("sites.Site", "redirects.Redirect", "conf.Setting")),
-        (_("Users"), ("auth.User", "auth.Group",)),
-    ),
-)
-
-register_setting(
-    name="ADMIN_REMOVAL",
-    description=_("Unregister these models from the admin."),
-    editable=False,
-    default=(),
-)
-
-register_setting(
     name="DEVICE_DEFAULT",
-    description=_("Device specific template sub-directory to use as the "
-        "default device."),
+    description=_("Device specific template sub-directory to use as the default device."),
     editable=False,
     default="",
 )
