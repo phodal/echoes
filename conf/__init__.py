@@ -193,14 +193,16 @@ class Settings(object):
         except KeyError:
             return getattr(django_settings, name, setting["default"])
 
-
-mezz_first = lambda app: not app.startswith("mezzanine.")
-for app in sorted(django_settings.INSTALLED_APPS, key=mezz_first):
-    module = import_module(app)
-    try:
-        import_module("%s.defaults" % app)
-    except:
-        if module_has_submodule(module, "defaults"):
-            raise
-
+#
+# echoes_first = lambda app: not app.startswith("")
+# print django_settings.INSTALLED_APPS
+# for app in sorted(django_settings.INSTALLED_APPS, key=echoes_first):
+#     module = import_module(app)
+#     try:
+#         print app
+#         import_module("%s.defaults" % app)
+#     except:
+#         if module_has_submodule(module, "defaults"):
+#             raise
+import_module("core.defaults")
 settings = Settings()
