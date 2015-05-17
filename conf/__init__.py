@@ -26,10 +26,10 @@ def register_setting(name=None, label=None, editable=False, description=None,
     dict by name.
     """
     if name is None:
-        raise TypeError("mezzanine.conf.register_setting requires the "
+        raise TypeError("conf.register_setting requires the "
                         "'name' keyword argument.")
     if editable and default is None:
-        raise TypeError("mezzanine.conf.register_setting requires the "
+        raise TypeError("conf.register_setting requires the "
                         "'default' keyword argument when 'editable' is True.")
 
     # append is True when called from an app (typically external)
