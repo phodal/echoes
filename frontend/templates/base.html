@@ -11,7 +11,7 @@
     <meta name="description" content="{% block meta_description %}{% endblock %}">
     <link rel="stylesheet" type="text/css" href="{% static "phodal/css/default.css" %}">
     <link rel="stylesheet" type="text/css" href="{% static "phodal/css/component.css" %}">
-    <title>{% block meta_title %}{% endblock %}</title>
+    <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -71,10 +71,10 @@
         </nav>
     </div>
 </div>
-<!-- /container -->
-<script src={% static "phodal/js/modernizr.custom.js" %}></script>
-<script src={% static "phodal/js/home.js" %}></script>
 {% block main %}
 {% endblock %}
+<script src={% static "phodal/js/modernizr.custom.js" %}></script>
+<script src={% static "phodal/js/home.js" %}></script>
+
 </body>
 </html>
