@@ -11,6 +11,7 @@
         <li><strong>{% firstof user.first_name user.username %}</strong></li>
         <!-- Userlinks -->
         {% block userlinks %}
+        <li><a href="{% url "home" %}">{% trans "View site" %}</a></li>
         <!-- Documentation -->
         {% url "django-admindocs-docroot" as docsroot %}
         {% if docsroot %}
