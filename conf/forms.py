@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from future.builtins import int
 
@@ -53,7 +54,7 @@ class SettingsForm(forms.Form):
         """
         fields = list(super(SettingsForm, self).__iter__())
         group = lambda field: field.name.split("_", 1)[0].title()
-        misc = _("Miscellaneous")
+        misc = _("杂项")
         groups = defaultdict(int)
         for field in fields:
             groups[group(field)] += 1

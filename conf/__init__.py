@@ -1,21 +1,24 @@
-"""
-Drop-in replacement for ``django.conf.settings`` that provides a
-consistent access method for settings defined in applications, the project
-or Django itself. Settings can also be made editable via the admin.
-"""
-
+#-*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from functools import partial
 from warnings import warn
 
+from django.apps import AppConfig
 from future.builtins import bytes, str
 from django.conf import settings as django_settings
 from django.utils.functional import Promise
 from django.utils.importlib import import_module
-from django.utils.module_loading import module_has_submodule
 
 
 registry = {}
+
+
+class AppConfig(AppConfig):
+    name = 'conf'
+    verbose_name = '配置'
+
+
+default_app_config = 'conf.AppConfig'
 
 
 def register_setting(name=None, label=None, editable=False, description=None,
@@ -197,7 +200,7 @@ class Settings(object):
 # echoes_first = lambda app: not app.startswith("")
 # print django_settings.INSTALLED_APPS
 # for app in sorted(django_settings.INSTALLED_APPS, key=echoes_first):
-#     module = import_module(app)
+# module = import_module(app)
 #     try:
 #         print app
 #         import_module("%s.defaults" % app)
