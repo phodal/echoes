@@ -13,12 +13,12 @@ from django.utils.importlib import import_module
 registry = {}
 
 
-class AppConfig(AppConfig):
+class ConfigureAppConfig(AppConfig):
     name = 'conf'
     verbose_name = '配置'
 
 
-default_app_config = 'conf.AppConfig'
+default_app_config = 'conf.ConfigureAppConfig'
 
 
 def register_setting(name=None, label=None, editable=False, description=None,
