@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-cmn-Hans">
-{% load i18n future staticfiles %}
+{% load i18n mustache future staticfiles %}
 
 <head>
     <meta charset="UTF-8"/>
@@ -15,6 +15,7 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
+{% mustache 'template.html' %}
 <div class="container">
     <div class="main clearfix">
         <nav id="menu" class="nav">

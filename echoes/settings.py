@@ -83,6 +83,7 @@ INSTALLED_APPS = (
     'rest_framework',
     'frontend',
     'conf',
+    'mustache',
 )
 
 SITE_ID = 1
