@@ -11,8 +11,6 @@
 - Publishing System
 - Editing System
 
-[Editing Publishing Separation](martinfowler.com/bliki/EditingPublishingSeparation.html)
-
 ###Admin
 
 - Admin UI
