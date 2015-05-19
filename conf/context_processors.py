@@ -52,8 +52,8 @@ def settings(request=None):
     # file from either grappelli or Django admin if grappelli isn't
     # installed. We don't call it ADMIN_MEDIA_PREFIX in order to avoid
     # any confusion.
-    if settings.GRAPPELLI_INSTALLED:
-        settings_dict["MEZZANINE_ADMIN_PREFIX"] = "grappelli/"
-    else:
-        settings_dict["MEZZANINE_ADMIN_PREFIX"] = "admin/"
+    # if settings.GRAPPELLI_INSTALLED:
+    #     settings_dict["MEZZANINE_ADMIN_PREFIX"] = "grappelli/"
+    # else:
+    #     settings_dict["MEZZANINE_ADMIN_PREFIX"] = "admin/"
     return {"settings": settings_dict}

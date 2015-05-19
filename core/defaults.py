@@ -28,3 +28,19 @@ register_setting(
     editable=True,
     default=_("另外一个开源内容管理平台"),
 )
+
+register_setting(
+    name="TEMPLATE_ACCESSIBLE_SETTINGS",
+    description=_("Sequence of setting names available within templates."),
+    editable=False,
+    default=(
+        "ACCOUNTS_APPROVAL_REQUIRED", "ACCOUNTS_VERIFICATION_REQUIRED",
+        "ADMIN_MENU_COLLAPSED",
+        "BITLY_ACCESS_TOKEN", "BLOG_USE_FEATURED_IMAGE",
+        "COMMENTS_DISQUS_SHORTNAME", "COMMENTS_NUM_LATEST",
+        "COMMENTS_DISQUS_API_PUBLIC_KEY", "COMMENTS_DISQUS_API_SECRET_KEY",
+        "COMMENTS_USE_RATINGS", "DEV_SERVER", "FORMS_USE_HTML5",
+        "GRAPPELLI_INSTALLED", "GOOGLE_ANALYTICS_ID", "JQUERY_FILENAME",
+        "LOGIN_URL", "LOGOUT_URL", "SITE_TITLE", "SITE_TAGLINE", "USE_L10N",
+    ),
+)

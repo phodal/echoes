@@ -107,6 +107,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.media",
     "django.core.context_processors.request",
     "django.core.context_processors.tz",
+    "django.template.context_processors.request",
+    "conf.context_processors.settings",
 )
 
 TEMPLATE_LOADERS = (
