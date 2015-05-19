@@ -7,7 +7,7 @@ from django.apps import AppConfig
 from future.builtins import bytes, str
 from django.conf import settings as django_settings
 from django.utils.functional import Promise
-from django.utils.importlib import import_module
+from importlib import import_module
 
 
 registry = {}
