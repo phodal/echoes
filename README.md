@@ -2,6 +2,8 @@
 
 > A Django CMS, follow trend.
 
+Inspired by [Mezzanine](https://github.com/stephenmcd/mezzanine)
+
 ![Echoes CMS](./docs/architecture.jpg)
 
 ##Goals
@@ -32,3 +34,4 @@
 
 - Responsive Nav
 - Responsive Layout
+
