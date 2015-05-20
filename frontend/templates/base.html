@@ -15,7 +15,6 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-{% mustache 'template.html' %}
 <div class="container">
     <div class="main clearfix">
         <nav id="menu" class="nav">
@@ -70,6 +69,7 @@
                 </li>
             </ul>
         </nav>
+        {% mustache 'template.html' %}
     </div>
 </div>
 {% block main %}

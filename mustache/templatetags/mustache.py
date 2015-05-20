@@ -60,5 +60,4 @@ def load_template_source(template_name):
 @register.simple_tag(takes_context=True)
 def mustache(context, template_name):
     template, source = load_template_source(template_name)
-    print context.dicts[0], settings
     return pystache.render(template, context.dicts[0])
