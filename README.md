@@ -2,7 +2,12 @@
 
 > A Django CMS, follow trend.
 
-##Roadmap
+##Goals
+
+- Basic CMS with Mustache
+- API for Frontend & Mobile
+- More Powerful
+- Command Line Interface
 
 ##TODO
 
@@ -10,18 +15,18 @@
 
 - Publishing System
 - Editing System
+- Mustache Template Support
+- RESTful API
+- Mobile Interface (Browser)
+- Mobile API (Browser & APP)
 
 ###Admin
 
 - Admin UI
 - Custom SEO
-- Editing on Page
-
-###User
-
-- Mobile 
+- Editing on Page (Django-CMS Like)
 
 ###UI
 
 - Responsive Nav
-- Flat-UI
+- Responsive Layout
