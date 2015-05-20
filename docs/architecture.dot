@@ -1,0 +1,35 @@
+digraph tree
+{
+    nodesep=0.5;
+    rankdir=BT;
+    charset="UTF-8";
+    fixedsize=true;
+    compound=true;
+    node [style="rounded,filled", width=0, height=0, shape=box, fillcolor="#E5E5E5", concentrate=true]
+
+    subgraph cluster_0 {
+        label = "Django";
+        "Admin UI"
+        "RESTful API"
+        subgraph cluster_4 {
+        	label="SEO"
+        	"SiteMap"
+        	"MicroData"
+        	"Custom SEO"
+        }	
+        subgraph cluster_3 {
+        	label="Template"
+        	"Inside"
+        	"Mustache"	
+        }
+    }
+
+    subgraph cluster_1 {
+        label = "Mobile";
+        "Mobile Version" [shape=box style="filled"]
+        "Mobile APP"[shape=box style="filled"]
+    }
+
+    "Mustache" -> "Mobile Version"
+    "RESTful API" -> "Mobile Version"[lhead=cluster_1]
+}

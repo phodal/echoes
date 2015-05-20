@@ -2,6 +2,8 @@
 
 > A Django CMS, follow trend.
 
+![Echoes CMS](./docs/architecture.jpg)
+
 ##Goals
 
 - Basic CMS with Mustache
