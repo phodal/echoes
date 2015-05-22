@@ -10,7 +10,7 @@ def set_device(request, device=""):
     to the site for a particular device (eg mobile).
     """
     response = redirect(add_cache_bypass(next_url(request) or "/"))
-    set_cookie(response, "mezzanine-device", device, 60 * 60 * 24 * 365)
+    set_cookie(response, "echoes-device", device, 60 * 60 * 24 * 365)
     return response
 
 def direct_to_template(request, template, extra_context=None, **kwargs):
