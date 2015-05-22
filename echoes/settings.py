@@ -84,6 +84,7 @@ INSTALLED_APPS = (
     'frontend',
     'conf',
     'mustache',
+    'mobile',
 )
 
 SITE_ID = 1
