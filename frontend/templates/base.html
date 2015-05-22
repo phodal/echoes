@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-cmn-Hans">
-{% load i18n mustache future staticfiles %}
+{% load i18n mustache staticfiles %}
 
 <head>
     <meta charset="UTF-8"/>
@@ -74,6 +74,8 @@
 </div>
 {% block main %}
 {% endblock %}
+
+<a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
 <script src={% static "phodal/js/modernizr.custom.js" %}></script>
 <script src={% static "phodal/js/home.js" %}></script>
 

@@ -15,4 +15,8 @@ urlpatterns += patterns("frontend.views",
    url("^$", "homepage", name="home"),
 )
 
+urlpatterns += patterns("core.views",
+   url("^set_device/(?P<device>.*)/$", "set_device", name="set_device"),
+)
+
 urlpatterns += staticfiles_urlpatterns()
