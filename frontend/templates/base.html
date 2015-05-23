@@ -75,6 +75,9 @@
 {% block main %}
 {% endblock %}
 
+{% block content-related %}
+{% endblock %}
+
 <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
 <script src={% static "phodal/js/modernizr.custom.js" %}></script>
 <script src={% static "phodal/js/home.js" %}></script>

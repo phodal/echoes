@@ -4,3 +4,5 @@ djangorestframework==3.1.2
 markdown==2.6.2
 django-filter==0.10
 pystache==0.5.4
+django-hosts=1.2
+docutils==0.12
