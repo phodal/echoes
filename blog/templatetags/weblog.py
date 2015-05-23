@@ -19,5 +19,6 @@ def render_latest_blog_entries(num, summary_first=False, hide_readmore=False, he
 @register.inclusion_tag('blog/month_links_snippet.html')
 def render_month_links():
     return {
-        'dates': Entry.objects.published().dates('pub_date', 'month', order='DESC'),
+        # 'dates': Entry.objects.published().dates('pub_date', 'month', order='DESC'),
+        'dates': Entry.objects.published(),
     }
