@@ -44,7 +44,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/weblog">
 								<span class="icon">
 									<i aria-hidden="true" class="icon-blog"></i>
 								</span>
@@ -69,14 +69,16 @@
                 </li>
             </ul>
         </nav>
-        {% mustache 'template.html' %}
-    </div>
-</div>
-{% block main %}
-{% endblock %}
+        <!--{% mustache 'template.html' %}-->
+        {% block main %}
+        {% endblock %}
 
-{% block content-related %}
-{% endblock %}
+        {% block content-related %}
+        {% endblock %}
+    </div>
+
+</div>
+
 
 <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
 <script src={% static "phodal/js/modernizr.custom.js" %}></script>
