@@ -1,3 +1,5 @@
+#-*- coding: utf-8 -*-
+
 from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.db import models
@@ -60,7 +62,7 @@ class Entry(models.Model):
 
     class Meta:
         db_table = 'blog_entries'
-        verbose_name_plural = 'entries'
+        verbose_name_plural = 'Blog'
         ordering = ('-pub_date',)
         get_latest_by = 'pub_date'
 

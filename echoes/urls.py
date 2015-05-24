@@ -16,6 +16,7 @@ sitemaps = {
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include('api.urls')),
+    url(r'^sitemap\.xml$', cache_page(60 * 60 * 6)(sitemap_views.sitemap), {'sitemaps': sitemaps}),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += patterns("frontend.views",
@@ -25,7 +26,6 @@ urlpatterns += patterns("frontend.views",
 urlpatterns += patterns("core.views",
    url("^set_device/(?P<device>.*)/$", "set_device", name="set_device"),
    url(r'^rss/weblog/$', WeblogEntryFeed(), name='weblog-feed'),
-   url(r'^sitemap\.xml$', cache_page(60 * 60 * 6)(sitemap_views.sitemap), {'sitemaps': sitemaps}),
    url(r'^weblog/', include('blog.urls', namespace='weblog')),
 )
 
