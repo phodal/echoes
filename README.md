@@ -13,25 +13,36 @@ Inspired by [Mezzanine](https://github.com/stephenmcd/mezzanine)
 - More Powerful
 - Command Line Interface
 
+##Done
+
+- Admin UI
+- Mustache Template Support
+
+##OnGoing
+
+###Publishing & Editing System
+
+- Markdown Support
+- Editing on Page
+
+####More
+
+- Canonical Link For Weblog
+- Mustache Render Templates
+
+###Page
+
+- Nav on Page (Mezzanine Like)
+
 ##TODO
 
 ###Basic
 
-- Publishing System
-- Editing System
-- Mustache Template Support
 - RESTful API
 - Mobile Interface (Browser)
 - Mobile API (Browser & APP)
-
-###Admin
-
-- Admin UI
-- Custom SEO
-- Editing on Page (Django-CMS Like)
 
 ###UI
 
 - Responsive Nav
 - Responsive Layout
-
