@@ -5,6 +5,7 @@ from django.utils.encoding import smart_str
 from django.utils.timezone import now
 from django.utils.translation import ugettext_lazy as _
 from docutils.core import publish_parts
+from uuslug import slugify
 
 BLOG_DOCUTILS_SETTINGS = {
     'doctitle_xform': False,
@@ -64,7 +65,7 @@ class Entry(models.Model):
         get_latest_by = 'pub_date'
 
     def __str__(self):
-        return self.headline
+        return slugify(self.headline)
 
     def get_absolute_url(self):
         kwargs = {
