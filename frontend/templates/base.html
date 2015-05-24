@@ -71,9 +71,13 @@
         </nav>
         <!--{% mustache 'template.html' %}-->
         {% block main %}
-        {% endblock %}
+        <div role="main">
+            {% block content %}{% endblock %}
+            <a href="#top" class="backtotop"><i class="icon icon-chevron-up"></i> Back to Top</a>
+        </div>
 
-        {% block content-related %}
+        {% block content-related %}{% endblock %}
+        {% block content-extra %}{% endblock %}
         {% endblock %}
     </div>
 
