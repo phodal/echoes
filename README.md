@@ -15,15 +15,18 @@
 
 - Admin UI
 - Mustache Template Support
-
-##OnGoing
+- Responsive Nav (Foundation)
+- Responsive Layout (Foundation)
 
 ###Publishing & Editing System
 
 - Markdown Support
-- Editing on Page
+
+##OnGoing
 
 ####More
+
+##Weblog
 
 - Canonical Link For Weblog
 - Mustache Render Templates
@@ -40,7 +43,6 @@
 - Mobile Interface (Browser)
 - Mobile API (Browser & APP)
 
-###UI
+###Publishing & Editing System
 
-- Responsive Nav
-- Responsive Layout
+- Editing on Page(onging)
