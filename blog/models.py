@@ -8,6 +8,7 @@ from django.utils.timezone import now
 from django.utils.translation import ugettext_lazy as _
 from docutils.core import publish_parts
 from uuslug import slugify
+import markdown2
 
 BLOG_DOCUTILS_SETTINGS = {
     'doctitle_xform': False,
@@ -30,6 +31,7 @@ class EntryQuerySet(models.QuerySet):
 CONTENT_FORMAT_CHOICES = (
     ('reST', 'reStructuredText'),
     ('html', 'Raw HTML'),
+    ('md', 'Markdown')
 )
 
 
@@ -96,6 +98,10 @@ class Entry(models.Model):
             self.body_html = publish_parts(source=smart_str(self.body),
                                            writer_name="html",
                                            settings_overrides=BLOG_DOCUTILS_SETTINGS)['fragment']
+        elif self.content_format == 'md':
+            self.summary_html = markdown2.markdown(self.summary)
+            self.body_html = markdown2.markdown(self.body)
+
         super(Entry, self).save(*args, **kwargs)
 
 
