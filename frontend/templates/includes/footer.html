@@ -1,5 +1,9 @@
 {% load i18n staticfiles %}
 
 <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
-<script src={% static "phodal/js/modernizr.custom.js" %}></script>
-<script src={% static "phodal/js/home.js" %}></script>
+<script src={% static "phodal/js/jquery-2.1.4.min.js" %}></script>
+<script src={% static "phodal/js/foundation/foundation.js" %}></script>
+<script src={% static "phodal/js/foundation/foundation.topbar.js" %}></script>
+<script>
+    $(document).foundation();
+</script>
