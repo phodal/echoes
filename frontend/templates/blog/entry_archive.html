@@ -14,13 +14,13 @@
     </form>
   {% endcomment %}
 
-  <ul class="list-news">
-
+  <div class="small-12 columns">
+  <ul class="small-block-grid-1 large-block-grid-1">
   {% for object in latest %}
     {% include 'blog/news_summary.html' with object=object %}
   {% endfor %}
-
   </ul>
+  </div>
 
   {% include 'blog/blog_pagination.html' %}
 

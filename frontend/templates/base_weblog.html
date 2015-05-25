@@ -12,10 +12,10 @@
 {% endblock %}
 
 {% block content-related %}
-<h1 class="visuallyhidden">Additional Information</h1>
+<h2>附加信息</h2>
 <div role="complementary">
     {% if events %}
-    <h2>Upcoming Events</h2>
+    <h3>活动</h3>
     <ul class="list-events">
         {% for event in events %}
         <li>
@@ -27,12 +27,12 @@
     </ul>
     {% endif %}
 
-    <h2><span>Archives</span></h2>
+    <h3>档案</h3>
     {% render_month_links %}
 
-    <h2><span>RSS Feeds</span></h2>
+    <h3>RSS</h3>
     <ul class="list-links-small rss-list">
-        <li><a href="{% url 'weblog-feed' %}">Latest news entries</a></li>
+        <li><a href="{% url 'weblog-feed' %}">最新内容</a></li>
     </ul>
 </div>
 {% endblock %}
