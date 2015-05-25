@@ -1,6 +1,23 @@
 {% load i18n staticfiles %}
 
-<a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
+<div id="footer">
+    <div class="footer-bottom">
+        <div class="row">
+            <div class="medium-4 medium-4 push-8 columns">
+                <ul class="home-social">
+                    <li><a href="http://weibo.com/phodal"></a></li>
+                    <li><a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "移动设备版" %}</a></li>
+                </ul>
+            </div>
+            <div class="medium-8 medium-8 pull-4 columns">
+                <ul class="links">
+                    <li><a href="/weblog">Blog</a></li>
+                </ul>
+                <p class="copyright">© 2015, <a href="http://echoes.phodal.com" title="Echoes CMS">Echoes CMS</a></p>
+            </div>
+        </div>
+    </div>
+</div>
 <script src={% static "phodal/js/jquery-2.1.4.min.js" %}></script>
 <script src={% static "phodal/js/foundation/foundation.js" %}></script>
 <script src={% static "phodal/js/foundation/foundation.topbar.js" %}></script>
