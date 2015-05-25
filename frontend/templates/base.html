@@ -15,23 +15,23 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-<div class="container">
-    <div class="main clearfix">
-        {% include "includes/header.html" %}
-
+{% include "includes/header.html" %}
+<section role="main" class="scroll-container">
+    <div class="row">
         <!--{% mustache 'template.html' %}-->
         {% block main %}
-        <div role="main">
+        <div class="large-9 medium-8 columns">
             {% block content %}{% endblock %}
             <a href="#top" class="backtotop"><i class="icon icon-chevron-up"></i> Back to Top</a>
         </div>
-
-        {% block content-related %}{% endblock %}
-        {% block content-extra %}{% endblock %}
+        <div class="large-3 medium-4 columns">
+            {% block content-related %}{% endblock %}
+            {% block content-extra %}{% endblock %}
+        </div>
         {% endblock %}
     </div>
 
-</div>
+</section>
 
 {% include "includes/footer.html" %}
 
