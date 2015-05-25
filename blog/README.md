@@ -1,0 +1,1 @@
+basis on [https://github.com/django/djangoproject.com](https://github.com/django/djangoproject.com)

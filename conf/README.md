@@ -1,0 +1,1 @@
+Inspired by [Mezzanine](https://github.com/stephenmcd/mezzanine)
