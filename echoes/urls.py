@@ -12,6 +12,7 @@ from django.contrib.flatpages import views as flat_views
 
 sitemaps = {
     'weblog': WeblogSitemap,
+    'flatpages': FlatPageSitemap,
 }
 
 urlpatterns = patterns("frontend.views",
