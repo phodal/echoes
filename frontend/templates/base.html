@@ -17,58 +17,8 @@
 <body itemscope itemtype="http://schema.org/WebPage">
 <div class="container">
     <div class="main clearfix">
-        <nav id="menu" class="nav">
-            <ul>
-                <li>
-                    <a href="#">
-								<span class="icon">
-									<i aria-hidden="true" class="icon-home"></i>
-								</span>
-                        <span>Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-								<span class="icon">
-									<i aria-hidden="true" class="icon-services"></i>
-								</span>
-                        <span>Services</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-								<span class="icon">
-									<i aria-hidden="true" class="icon-portfolio"></i>
-								</span>
-                        <span>Portfolio</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/weblog">
-								<span class="icon">
-									<i aria-hidden="true" class="icon-blog"></i>
-								</span>
-                        <span>Blog</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-								<span class="icon">
-									<i aria-hidden="true" class="icon-team"></i>
-								</span>
-                        <span>The team</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-								<span class="icon">
-									<i aria-hidden="true" class="icon-contact"></i>
-								</span>
-                        <span>Contact</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        {% include "includes/header.html" %}
+
         <!--{% mustache 'template.html' %}-->
         {% block main %}
         <div role="main">
