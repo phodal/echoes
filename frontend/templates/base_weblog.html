@@ -12,27 +12,5 @@
 {% endblock %}
 
 {% block content-related %}
-<h2>附加信息</h2>
-<div role="complementary">
-    {% if events %}
-    <h3>活动</h3>
-    <ul class="list-events">
-        {% for event in events %}
-        <li>
-            <a href="{{ event.external_url }}" target="_blank">{{ event.headline }}</a>
-            <span class="meta"><span>{{ event.date|date:"F j, Y" }}</span>  |  {{ event.location }}</span>
-            <i class="icon icon-calendar"></i>
-        </li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-
-    <h3>档案</h3>
-    {% render_month_links %}
-
-    <h3>RSS</h3>
-    <ul class="list-links-small rss-list">
-        <li><a href="{% url 'weblog-feed' %}">最新内容</a></li>
-    </ul>
-</div>
+{% include 'blog/sidebar.html' %}
 {% endblock %}
