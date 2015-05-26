@@ -121,6 +121,7 @@ TEMPLATES = [
                 "django.template.context_processors.static",
                 "django.template.context_processors.tz",
                 "conf.context_processors.settings",
+                "conf.context_processors.flatpage",
                 "django.template.context_processors.request",
             ],
             'loaders': [

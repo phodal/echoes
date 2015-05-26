@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
+from django.contrib.flatpages.models import FlatPage
 from utils.cache import (cache_key_prefix, cache_installed,
-                                   cache_get, cache_set)
+                         cache_get, cache_set)
 
 
 # Deprecated settings and their defaults.
@@ -18,6 +19,7 @@ class TemplateSettings(dict):
     def __getitem__(self, k):
         if k in DEPRECATED:
             from warnings import warn
+
             warn("%s is deprecated, please remove it from your templates" % k)
         return super(TemplateSettings, self).__getitem__(k)
 
@@ -33,6 +35,7 @@ def settings(request=None):
     Add the settings object to the template context.
     """
     from conf import settings
+
     settings_dict = None
     cache_settings = request and cache_installed()
     if cache_settings:
@@ -53,7 +56,16 @@ def settings(request=None):
     # installed. We don't call it ADMIN_MEDIA_PREFIX in order to avoid
     # any confusion.
     # if settings.GRAPPELLI_INSTALLED:
-    #     settings_dict["MEZZANINE_ADMIN_PREFIX"] = "grappelli/"
+    # settings_dict["MEZZANINE_ADMIN_PREFIX"] = "grappelli/"
     # else:
     #     settings_dict["MEZZANINE_ADMIN_PREFIX"] = "admin/"
     return {"settings": settings_dict}
+
+
+def flatpage(request=None):
+    """
+    Add the settings object to the template context.
+    """
+    flatpages = FlatPage.objects.all()
+    return {"flatpages": flatpages}
+
