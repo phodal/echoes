@@ -12,6 +12,11 @@
             <div class="medium-8 medium-8 pull-4 columns">
                 <ul class="links">
                     <li><a href="/weblog">Blog</a></li>
+                    {% if flatpages %}
+                    {% for flatpage in flatpages %}
+                    <li><a href="{{flatpage.url}}">{{flatpage.title}}</a></li>
+                    {% endfor %}
+                    {% endif %}
                 </ul>
                 <p class="copyright">© 2015, <a href="http://echoes.phodal.com" title="Echoes CMS">Echoes CMS</a></p>
             </div>
