@@ -1,9 +1,9 @@
-{% load weblog %}
+{% load weblog  %}
 <h2>附加信息</h2>
-<div role="complementary">
+<div>
     {% if events %}
     <h3>活动</h3>
-    <ul class="list-events">
+    <ul class="small-block-grid-1 large-block-grid-1">
         {% for event in events %}
         <li>
             <a href="{{ event.external_url }}" target="_blank">{{ event.headline }}</a>
@@ -18,7 +18,7 @@
     {% render_month_links %}
 
     <h3>RSS</h3>
-    <ul class="list-links-small rss-list">
+    <ul class="small-block-grid-1 large-block-grid-1">
         <li><a href="{% url 'weblog-feed' %}">最新内容</a></li>
     </ul>
 </div>
