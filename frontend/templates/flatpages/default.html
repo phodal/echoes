@@ -2,12 +2,9 @@
 
 {% block layout_class %}full-width{% endblock %}
 
-{% block title %}{{ flatpage.title }}{% endblock %}
-
-{% block header %}
-    <h1>{{ flatpage.title }}</h1>
-{% endblock %}
+{% block meta_title %}{{ flatpage.title }}{% endblock %}
 
 {% block content %}
+    <h1>{{ flatpage.title }}</h1>
     {{ flatpage.content }}
 {% endblock %}
