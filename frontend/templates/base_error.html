@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block layout_class %}sidebar-right{% endblock %}
+{% block title %}Django Community{% endblock %}
+
+{% block header %}
+  <h1 class="visuallyhidden">Community</h1>
+  <p><em>Django</em> Community{% if community_stats %}
+  {% endif %}</p>
+{% endblock %}
+
+{% block content-related %}
+<div role="complementary">
+  <h2>Improve Echoes</h2>
+</div>
+{% endblock %}

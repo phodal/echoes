@@ -29,6 +29,7 @@ urlpatterns += [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include('api.urls')),
     url(r'^sitemap\.xml$', cache_page(60 * 60 * 6)(sitemap_views.sitemap), {'sitemaps': sitemaps}),
+    url(r'', include('legacy.urls')),
     url(r'^(?P<url>.*/)$', flat_views.flatpage),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

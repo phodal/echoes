@@ -73,11 +73,12 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = (
     'admin_ui',
-    'django.contrib.admin',
     'django.contrib.sites',
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.flatpages',
     'django.contrib.contenttypes',
+    'django.contrib.humanize',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
