@@ -9,6 +9,11 @@ urlpatterns = [
         name="entry"
     ),
     url(
+        r'^(?P<slug>[\w-]+)/$',
+        views.BlogDateDetailView.as_view(),
+        name="entry"
+    ),
+    url(
         r'^(?P<year>\d{4})/(?P<month>[a-z]{3})/(?P<day>\w{1,2})/$',
         views.BlogDayArchiveView.as_view(),
         name="archive-day"
