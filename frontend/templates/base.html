@@ -11,6 +11,7 @@
     <meta name="description" content="{% block meta_description %}{% endblock %}">
     <link rel="stylesheet" type="text/css" href="{% static "phodal/css/foundation.css" %}">
     <link rel="stylesheet" type="text/css" href="{% static "phodal/css/main.css" %}">
+    {% block extend_seo %}{% endblock %}
     <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
 </head>
 
