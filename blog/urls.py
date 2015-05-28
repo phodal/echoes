@@ -10,7 +10,7 @@ urlpatterns = [
     ),
     url(
         r'^(?P<slug>[\w-]+)/$',
-        views.BlogDateDetailView.as_view(),
+        views.BlogDetailView.as_view(),
         name="entry"
     ),
     url(

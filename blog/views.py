@@ -1,3 +1,4 @@
+from django.views.generic import View, DetailView
 from django.views.generic.dates import (
     ArchiveIndexView, DateDetailView, DayArchiveView, MonthArchiveView,
     YearArchiveView,
@@ -7,7 +8,6 @@ from .models import Entry, Event
 
 
 class BlogViewMixin(object):
-
     date_field = 'pub_date'
     paginate_by = 10
 
@@ -49,4 +49,8 @@ class BlogDayArchiveView(BlogViewMixin, DayArchiveView):
 
 
 class BlogDateDetailView(BlogViewMixin, DateDetailView):
+    pass
+
+
+class BlogDetailView(BlogViewMixin, DetailView):
     pass
