@@ -4,3 +4,7 @@
 db
 .tox
 .coverage
+echoes/static/rest_framework
+echoes/static/admin
+echoes/static/mezzanine
+echoes/static/phodal
