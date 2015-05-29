@@ -3,3 +3,4 @@
 *.db
 db
 .tox
+.coverage
