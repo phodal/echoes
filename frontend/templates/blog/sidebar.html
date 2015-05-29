@@ -5,9 +5,11 @@
     <h3>活动</h3>
     <ul class="small-block-grid-1 large-block-grid-1">
         {% for event in events %}
-        <li>
-            <a href="{{ event.external_url }}" target="_blank">{{ event.headline }}</a>
-            <span class="meta"><span>{{ event.date|date:"F j, Y" }}</span>  |  {{ event.location }}</span>
+        <li itemscope itemtype="http://schema.org/Event">
+            <a href="{{ event.external_url }}" target="_blank" itemprop="url">{{ event.headline }}</a>
+            <span class="meta" itemprop="name"><span>{{ event.date|date:"F j, Y" }}</span>  |
+                <span itemprop="location">{{ event.location }}</span>
+            </span>
             <i class="icon icon-calendar"></i>
         </li>
         {% endfor %}
