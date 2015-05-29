@@ -4,8 +4,7 @@ addons:
 language: python
 env:
   - TOXENV=py27-tests
-  - TOXENV=py34-flake8
-  - TOXENV=py34-isort
+  - TOXENV=py27-isort
 install:
   - pip install coveralls tox
 before_script:
@@ -13,3 +12,4 @@ script:
   - tox
 after_success: coveralls
 notifications:
+    use_notice: true
