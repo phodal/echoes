@@ -6,6 +6,7 @@ env:
   - TOXENV=py27-tests
   - TOXENV=py27-isort
 install:
+  - pip install -r requirements.txt
   - pip install coveralls tox
 before_script:
 script:
