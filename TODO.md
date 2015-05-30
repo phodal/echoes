@@ -34,3 +34,8 @@
 ###Publishing & Editing System
 
 - Editing on Page(onging)
+
+
+###Others
+
+- add static link to other page
