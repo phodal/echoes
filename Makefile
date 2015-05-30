@@ -1,6 +1,6 @@
 STATIC = djangoproject/static
 SCSS = djangoproject/scss
-APP_LIST ?= admin_ui blog rest_framework frontend conf mustache mobile
+APP_LIST ?= admin_ui blog rest_framework frontend conf mustache mobile api legacy
 
 .PHONY: collectstatics compile-scss compile-scss-debug watch-scss run install test ci
 
