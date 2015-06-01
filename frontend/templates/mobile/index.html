@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+{% load i18n mustache staticfiles %}
 <head lang="en">
     <meta charset="UTF-8">
     <title>{% if settings.SITE_TITLE %} {{ settings.SITE_TITLE }}{% endif %}</title>
 </head>
 <body>
 <h1>{% if settings.SITE_TITLE %} {{ settings.SITE_TITLE }}{% endif %}</h1>
+{%mustache 'mobile/info.html' %}
 </body>
 </html>
