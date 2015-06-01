@@ -94,6 +94,8 @@ INSTALLED_APPS = (
 
 SITE_ID = 1
 
+PYSTACHE_APP_TEMPLATE_DIR = 'templates'
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

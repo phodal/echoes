@@ -25,7 +25,7 @@ def get_app_template_dirs():
             mod = import_module(app)
         except ImportError, e:
             raise ImproperlyConfigured('ImportError %s: %s' % (app, e.args[0]))
-        attr = getattr(settings, 'PYSTACHE_APP_TEMPLATE_DIR', 'mustaches')
+        attr = getattr(settings, 'PYSTACHE_APP_TEMPLATE_DIR', 'templates')
         template_dir = os.path.join(os.path.dirname(mod.__file__),
                                     attr)
         if os.path.isdir(template_dir):
