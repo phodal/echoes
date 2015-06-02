@@ -9,4 +9,5 @@
 <h1>{% if settings.SITE_TITLE %} {{ settings.SITE_TITLE }}{% endif %}</h1>
 {%mustache 'mobile/info.html' %}
 </body>
+<a href="{% url "set_device" "default" %}?next={{ request.path }}">{% trans "桌面版" %}</a>
 </html>
