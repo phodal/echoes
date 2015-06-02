@@ -9,9 +9,7 @@
 </head>
 <body>
 <div class="container">
-<h1>hello</h1>
-<h1>hello</h1>
-
+<h1>{% if settings.SITE_TAGLINE %} {{ settings.SITE_TAGLINE }}{% endif %}</h1>
 <nav class="navbar top-bar" data-topbar role="navigation">
     <div class="container">
         <ul class="navbar-list">
@@ -37,14 +35,29 @@
         </ul>
     </div>
 </nav>
-<h1>hello</h1>
-<h1>hello</h1>
-<h1>hello</h1>
-<h1>hello</h1>
-<h1>hello</h1>
-<h1>hello</h1>
-<h1>hello</h1>
-<h1>hello</h1>
+    <p>
+        Lorem ipsum dolor sit amet, porta voluptate at, sodales non est tortor, lorem eleifend fringilla praesent, amet
+        nulla fringilla leo, gravida tempor egestas bibendum mattis donec. Facilisis porta viverra. Congue nunc, vel
+        turpis sociosqu arcu commodo nulla, voluptatem tellus ornare nulla, etiam consequat tortor amet porttitor,
+        aliquet vel ligula vel. Ac tincidunt, lectus integer, et integer ac sem massa ornare, nostra elementum velit in
+        tristique et, nibh vestibulum est magna vitae pellentesque. Praesent ut venenatis praesent turpis commodo urna.
+        Vitae mauris enim turpis nec, montes ipsum id hymenaeos. Vivamus pellentesque sapien. Donec purus non asperiores
+        elementum ornare praesent, tellus leo optio vivamus diam lacinia, tincidunt ut non cras scelerisque pretium. Est
+        velit eu gravida, mus dignissim. Tempor suspendisse at inceptos, wisi in, sodales eros dolor curae sed, elit at
+        amet nulla in quis ornare. Urna duis, lacus velit. Massa quam vehicula suspendisse, id vitae, quam ligula quis
+        odio rhoncus.</p>
+
+    <p>Facilisi fusce, elit maecenas, nec dui sed a, vivamus in per non, orci elementum consectetuer leo pede. Maecenas
+        malesuada dignissim, dictum augue turpis, tincidunt habitasse pellentesque ut sit ante volutpat, mauris mi velit
+        non magna amet. Sodales elit sed ut vivamus, suspendisse ac mattis vitae adipiscing, non sagittis dictum in.
+        Amet amet eleifend, natoque vel urna, lacus eu donec placerat at vitae rhoncus, augue orci volutpat duis
+        rhoncus, nulla consectetuer suspendisse lacinia at nec. Ipsum nec eros quis. Vehicula nulla, neque phasellus
+        scelerisque condimentum auctor condimentum, fermentum turpis habitant elit vel suspendisse, tortor phasellus,
+        diam suscipit. Risus ac dui amet in in pulvinar, ut in, vestibulum et a, ornare libero, nec ligula a aliquet
+        facilisi nulla proin. Sollicitudin convallis amet justo massa diam vestibulum, adipiscing aliquam eu, ut dolor
+        at rutrum in dui, aliquam libero, magnis fusce habitasse lorem pellentesque feugiat. Ridiculus mollit risus mus
+        phasellus suspendisse. Sapien ut pede, aenean risus. Penatibus id odio aspernatur hac, aenean eu.
+    </p>
 <a href="{% url "set_device" "default" %}?next={{ request.path }}">{% trans "桌面版" %}</a>
 </div>
 <script src={% static "phodal/js/jquery-2.1.4.min.js" %}></script>
