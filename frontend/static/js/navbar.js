@@ -1,7 +1,6 @@
 $(document).ready(function() {
   // Variables
-  var $codeSnippets = $('.code-example-body'),
-      $nav = $('.navbar'),
+  var $nav = $('.navbar'),
       $body = $('body'),
       $window = $(window),
       $popoverLink = $('[data-popover]'),
@@ -72,19 +71,6 @@ $(document).ready(function() {
     if(navOffsetTop > $window.scrollTop() && $body.hasClass('has-docked-nav')) {
       $body.removeClass('has-docked-nav')
     }
-  }
-
-  function escapeHtml(string) {
-    return String(string).replace(/[&<>"'\/]/g, function (s) {
-      return entityMap[s];
-    });
-  }
-
-  function buildSnippets() {
-    $codeSnippets.each(function() {
-      var newContent = escapeHtml($(this).html())
-      $(this).html(newContent)
-    })
   }
 
   init();
